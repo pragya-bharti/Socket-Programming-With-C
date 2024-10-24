@@ -57,7 +57,7 @@ int main()
         filePointer = fopen(buffer,"r");
         stat(buffer,&statVariable);
         size=statVariable.st_size;
-        fread(file,sizeof(file),1,filePointer);
+        fread(file,sizeof(file),1);
         send(clientDescriptor,file,sizeof(file),0);
     }
         return 0;
